@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:batchdb
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbcDriver
+    platform: hsqldb
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  batch:
+    job:
+      enabled: false
+  cloud:
+    dataflow:
+      features:
+        streams-enabled: false
+        schedules-enabled: true
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level: debug
